@@ -1,0 +1,24 @@
+<main>
+    <div class="window">
+        <div class="tabs">
+            <div class="tab" (click)="setTab('login')" [class.active]="currentTab === 'login'">
+                <p>LOGIN</p>
+            </div>
+            <div class="tab" (click)="setTab('register')" [class.active]="currentTab === 'register'">
+                <p>REGISTER</p>
+            </div>
+        </div>
+        <div class="content">
+            <div *ngIf="currentTab === 'login'">
+                <div class="submit" (click)="login()">LOGIN</div>
+            </div>
+            
+            <div *ngIf="currentTab === 'register'">
+                RERE
+                <div class="button" id="register">
+                    REGISTER
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
