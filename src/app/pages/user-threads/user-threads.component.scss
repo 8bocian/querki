@@ -5,6 +5,11 @@ main {
     margin: 0;
     display: flex;
     font-size: 1rem;
+    background: #231E3F;
+}
+
+* {
+    transition: all 1s ease-in-out;
 }
 
 
@@ -19,6 +24,7 @@ main {
         display: flex;
         width: 90%;
         margin: 0 5% 0 5%;
+        padding-top: 25px;
         height: 50px;
         border-radius: 30px;
         background-color: #231E3F;
@@ -61,10 +67,12 @@ main {
     .questions {
         width: 90%;
         padding: 0 5% 0 5%;
-        height: calc(90% - 50px);
+        height: calc(90% - 75px);
         display: flex;
         flex-direction: column;
+        background-color: #231E3F;
         overflow-y: scroll;
+        position: relative;
 
         .question {
             width: 90%;
@@ -73,12 +81,21 @@ main {
             border-radius: 30px;
             margin-top: 10px;
             text-align: center;
+            position: relative;
+            .indicator {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                background-color: #FF0000;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
         }
-        
-        .filler {
-            height: 100px;
-            width: 100%;
-        }
+
     }
 
 
@@ -111,6 +128,25 @@ main {
             border-radius: 50%;
             background-color: #8070E9;
             justify-content: center;
+        }
+    }
+}
+
+
+@media (min-width: 800px) {
+    .window {
+        .questions {
+            width: 60%;
+            padding: 0 20% 0 20%;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .window {
+        .questions {
+            width: 30%;
+            padding: 0 35% 0 35%;
         }
     }
 }
